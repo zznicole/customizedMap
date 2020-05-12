@@ -1,6 +1,11 @@
-let map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat:58.413740,lng:15.623510},
+let myMap = new google.maps.Map(document.getElementById("map"), {
+  center: { lat: 58.41374, lng: 15.62351 },
   zoom: 14,
-  icon: 
-  'https://www.tiles4all.co.za/wp-content/sabai/File/thumbnails/4e68d5d175ef448e8eb3b14cb72083a9.png'
+});
+
+let myMarker = new google.maps.Marker({
+  position: { lat: 58.41374, lng: 15.62351 },
+  map: myMap,
+  draggable: true,
+  icon: "https://image.flaticon.com/icons/svg/807/807927.svg",
 });
