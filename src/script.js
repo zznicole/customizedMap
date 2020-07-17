@@ -230,9 +230,38 @@ let myMap = new google.maps.Map(document.getElementById("map"), {
   ]
 });
 
+let contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Linköping</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Linköping</b>, also referred to as <b>Linkoeping</b>, is a city in southern Sweden, ' +
+      'with 161,499 inhabitants as of 2019. It is the 5th largest city in Sweden. '+
+      'It is the seat of Linköping Municipality and the capital of Östergötland County.'+
+      'Linköping is well known for its cathedral, '+
+      'is the center of an old cultural region and celebrated its 700th anniversary in 1987.'+
+      'Nowadays, Linköping is known for its university and its high-technology industry.'+
+      ' Linköping wants to create a sustainable development of the city and therefore plans to become a carbon-neutral community by 2025 '+
+      'Special sights of interests are: the locks of Berg on the Göta Canal,  '+
+      'the locks of the Kinda Canal, Gamla Linköping, Valla skogen and Valla fritidsområde (Old Linköping, Valla Wood, and the Valla recreational area), '+
+      'Flygvapen museum (the Air Force Museum).</p>'+
+      '<p>Attribution: Linköping, <a href="https://en.wikipedia.org/wiki/Link%C3%B6ping">'+
+      'https://en.wikipedia.org/wiki/Link%C3%B6ping</a> '+
+      '(last visited 13 June 2020.</p>'+
+      '</div>'+
+      '</div>';
+
+let infowindow = new google.maps.InfoWindow({
+  content: contentString
+});
+
 let myMarker = new google.maps.Marker({
   position: { lat: 58.41374, lng: 15.62351 },
   map: myMap,
   draggable: true,
   icon: "https://image.flaticon.com/icons/svg/807/807927.svg",
+});
+ 
+myMarker.addListener('click', function() {
+  infowindow.open(myMap, myMarker);
 });
