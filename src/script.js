@@ -235,7 +235,7 @@ let contentString = '<div id="content">'+
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Linköping</h1>'+
       '<div id="bodyContent">'+
-      '<p><b>Linköping</b>, also referred to as <b>Linkoeping</b>, is a city in southern Sweden, ' +
+      '<p><b>Linköping</b>, also referred to as <b>Linkoeping</b>(in English), is a city in southern Sweden, ' +
       'with 161,499 inhabitants as of 2019. It is the 5th largest city in Sweden. '+
       'It is the seat of Linköping Municipality and the capital of Östergötland County.'+
       'Linköping is well known for its cathedral, '+
