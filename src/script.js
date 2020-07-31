@@ -255,7 +255,6 @@ let infowindow = new google.maps.InfoWindow({
   content: contentString
 });
 
-let swimSpots =
 
 let labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 console.log(labels.indexOf('L'));
